@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Graphic Design Services - Best Design Solutions with Unlimited Revisions and Fast Turnaround">
+    <meta name="keywords" content="graphic design, design services, professional design, branding, editing">
+    <meta name="author" content="Graphic Design Services">
+    <title>Graphic Design Services - Best Design Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .benefit-image {
+            transition: transform 0.5s ease;
+        }
+        .benefit-image:hover {
+            transform: scale(1.02);
+        }
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            opacity: 1;
+        }
+        .faq-answer {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+        .mobile-menu.active {
+            display: block;
+        }
+        .stars {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Announcement Bar -->
+    <div class="bg-gray-900 text-white py-3 px-4 text-center text-sm md:text-base">
+        <p class="font-medium">🚚 Fast Worldwide Shipping (5 days delivery) | 100% Satisfaction Guarantee</p>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-palette text-white text-lg"></i>
+                </div>
+                <span class="text-xl font-bold text-gray-900">DesignPro</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Home</a>
+                <a href="#features" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Features</a>
+                <a href="#benefits" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Benefits</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">About</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Testimonials</a>
+                <a href="#faq" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">FAQ</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Contact</a>
+            </div>
+
+            <!-- Search and CTA -->
+            <div class="hidden md:flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="bg-gray-100 rounded-lg py-2 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 transition duration-300">
+                    <i class="fas fa-search absolute right-3 top-2.5 text-gray-400"></i>
+                </div>
+                <button class="btn-primary bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                    Get Started
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden text-gray-900 focus:outline-none" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 py-4 space-y-3">
+                <a href="#home" class="block text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-300">Home</a>
+                <a href="#features" class="block text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-300">Features</a>
+                <a href="#benefits" class="block text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-300">Benefits</a>
+                <a href="#about" class="block text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-300">About</a>
+                <a href="#testimonials" class="block text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-300">Testimonials</a>
+                <a href="#faq" class="block text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-300">FAQ</a>
+                <a href="#contact" class="block text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-300">Contact</a>
+                <button class="w-full btn-primary bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 mt-4">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen md:h-96 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1504093376055-b3094b674dcb?w=1600&h=900&fit=crop&q=80" alt="Graphic Design Services" class="w-full h-full object-cover">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight tracking-tight">
+                Graphic Design Services
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-100 mb-8 md:mb-10 font-light">
+                Best Graphic Design Services
+            </p>
+            <p class="text-lg text-gray-200 mb-8 md:mb-12 max-w-2xl mx-auto">
+                Professional design solutions tailored to elevate your brand and captivate your audience
+            </p>
+            <button class="btn-primary bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition duration-300 inline-block">
+                Start Your Project Today
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Our Design Services
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive design solutions crafted to bring your vision to life with precision and creativity
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1: Designing -->
+                <div class="feature-card bg-white border border-gray-200 rounded-xl p-8 hover:border-blue-300">
+                    <div class="bg-gradient-to-br from-blue-100 to-blue-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-pencil-ruler text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Professional Designing</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Custom designs tailored to your brand identity and business goals. Our expert designers create visually stunning graphics that engage and inspire your audience.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-600"></i>
+                            <span>Brand identity design</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-600"></i>
+                            <span>Marketing materials</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-600"></i>
+                            <span>Digital assets</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: Editing -->
+                <div class="feature-card bg-white border border-gray-200 rounded-xl p-8 hover:border-blue-300">
+                    <div class="bg-gradient-to-br from-blue-100 to-blue-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-edit text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Editing</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Professional editing services to refine your existing designs. We enhance quality, improve clarity, and ensure your visuals meet the highest standards.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-600"></i>
+                            <span>Image enhancement</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-600"></i>
+                            <span>Color correction</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-600"></i>
+                            <span>Quality optimization</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3: Revision -->
+                <div class="feature-card bg-white border border-gray-200 rounded-xl p-8 hover:border-blue-300">
+                    <div class="bg-gradient-to-br from-blue-100 to-blue-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-sync-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Unlimited Revisions</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        We're committed to your satisfaction. Unlimited revisions ensure your design is exactly what you envisioned, with no hidden charges or limits.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-600"></i>
+                            <span>No revision limits</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-600"></i>
+                            <span>Quick turnaround</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-600"></i>
+                            <span>Satisfaction guaranteed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Why Choose Our Design Services
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Experience the difference with our commitment to excellence, innovation, and customer satisfaction
+                </p>
+            </div>
+
+            <!-- Benefit 1: Unlimited Revisions -->
+            <div class="mb-16 md:mb-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" alt="Unlimited Revisions" class="benefit-image w-full rounded-xl shadow-lg">
+                    </div>
+                    <div class="order-1 md:order-2 bg-white p-8 md:p-12 rounded-xl shadow-md">
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Unlimited Revisions</h3>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Your satisfaction is our priority. We offer unlimited revisions to ensure your design is absolutely perfect. No restrictions, no hidden fees—just pure commitment to getting it right. Our team will work with you through as many iterations as needed until you're completely satisfied with the final result.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Unlimited Design Changes</p>
+                                    <p class="text-sm text-gray-600">Make as many modifications as you need</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">No Extra Charges</p>
+                                    <p class="text-sm text-gray-600">Revisions are included in your package</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Dedicated Support</p>
+                                    <p class="text-sm text-gray-600">Our team is always ready to help</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 2: Fast Turnaround -->
+            <div class="mb-16 md:mb-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="bg-gray-100 p-8 md:p-12 rounded-xl shadow-md">
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Fast Turnaround</h3>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Time is money in business. We understand the importance of quick delivery without compromising quality. Our streamlined process ensures your designs are ready in record time, allowing you to launch your campaigns and projects on schedule. Meet your deadlines with confidence.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-clock text-blue-600 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Quick Delivery</p>
+                                    <p class="text-sm text-gray-600">Projects completed in 24-48 hours</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-clock text-blue-600 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Efficient Process</p>
+                                    <p class="text-sm text-gray-600">Optimized workflow for faster results</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-clock text-blue-600 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Priority Support</p>
+                                    <p class="text-sm text-gray-600">Rush orders available upon request</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-2">
+                        <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" alt="Fast Turnaround" class="benefit-image w-full rounded-xl shadow-lg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 3: Original Design -->
+            <div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" alt="Original Design" class="benefit-image w-full rounded-xl shadow-lg">
+                    </div>
+                    <div class="order-1 md:order-2 bg-white p-8 md:p-12 rounded-xl shadow-md">
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">100% Original Design</h3>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Every design is created from scratch, specifically for your brand. We don't use templates or stock designs. Our creative team develops unique, custom solutions that reflect your brand identity and stand out in the market. Your design is as unique as your business.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-star text-yellow-500 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Custom Creation</p>
+                                    <p class="text-sm text-gray-600">Built specifically for your needs</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-star text-yellow-500 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Unique & Memorable</p>
+                                    <p class="text-sm text-gray-600">Stand out from your competition</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-star text-yellow-500 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Full Ownership</p>
+                                    <p class="text-sm text-gray-600">All rights transfer to you</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+                    About DesignPro
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Discover our story and the passion that drives our design excellence
+                </p>
+            </div>
+
+            <div class="space-y-8 md:space-y-10">
+                <!-- Paragraph 1: Company History -->
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 md:p-12 rounded-xl border border-blue-100">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Journey</h3>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        Founded in 2015, DesignPro emerged from a simple vision: to democratize professional graphic design services for businesses of all sizes. What started as a small team of passionate designers working from a modest studio has evolved into a thriving creative powerhouse serving thousands of satisfied clients worldwide. Over the past eight years, we've honed our craft, expanded our expertise, and built a reputation for delivering exceptional design solutions that transform brands and drive business growth. Our journey has been marked by continuous innovation, unwavering commitment to quality, and deep partnerships with our clients who have become our greatest advocates.
+                    </p>
+                </div>
+
+                <!-- Paragraph 2: Mission and Values -->
+                <div class="bg-gradient-to-r from-indigo-50 to-blue-50 p-8 md:p-12 rounded-xl border border-indigo-100">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission & Vision</h3>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        Our mission is to empower businesses through transformative design that tells their unique story and connects with their audience. We believe that exceptional design is not a luxury—it's a necessity in today's competitive landscape. We're committed to combining artistic excellence with strategic thinking, ensuring every design serves a purpose and delivers measurable results. Our core values—creativity, integrity, customer-centricity, and excellence—guide every project we undertake. We envision a future where every business, regardless of size or industry, has access to world-class design solutions that elevate their brand presence and inspire their customers. Through innovation, collaboration, and relentless dedication to our craft, we're building that future one design at a time.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                <div class="text-center">
+                    <p class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">5000+</p>
+                    <p class="text-gray-600 font-medium">Projects Completed</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">98%</p>
+                    <p class="text-gray-600 font-medium">Client Satisfaction</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">50+</p>
+                    <p class="text-gray-600 font-medium">Design Experts</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">24/7</p>
+                    <p class="text-gray-600 font-medium">Customer Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+                    What Our Clients Say
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Real feedback from real clients who've transformed their brands with our design services
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="stars flex text-lg">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-sm font-semibold text-gray-700">5.0</span>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "DesignPro completely transformed our brand identity. The unlimited revisions policy meant we could refine every detail until it was absolutely perfect. The team was incredibly responsive and creative—they took our vague ideas and turned them into stunning visual assets that our customers love. We've seen a 45% increase in engagement since launching with their new designs."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                            SK
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Sarah Kim</p>
+                            <p class="text-sm text-gray-600">Founder, Tech Startup Co.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="stars flex text-lg">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-sm font-semibold text-gray-700">5.0</span>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "What impressed me most was the fast turnaround. I needed a complete rebrand in just two weeks, and DesignPro delivered flawlessly. Every design was original and perfectly tailored to our brand voice. The quality is exceptional, and the pricing is fair for the level of service. I've already recommended them to three other business owners."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold">
+                            MC
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Marcus Chen</p>
+                            <p class="text-sm text-gray-600">CEO, Fashion Boutique</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="stars flex text-lg">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-sm font-semibold text-gray-700">5.0</span>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "As a non-designer, I was nervous about working with a design agency. DesignPro made the entire process smooth and enjoyable. They asked all the right questions to understand our vision, created original designs that exceeded expectations, and were patient with my requests for changes. The unlimited revisions truly meant unlimited—no pressure, no judgment. Highly recommended!"
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
+                            EJ
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Emily Johnson</p>
+                            <p class="text-sm text-gray-600">Owner, Wellness Coaching</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="stars flex text-lg">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-sm font-semibold text-gray-700">5.0</span>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "We've worked with DesignPro for over two years now, and they consistently deliver exceptional results. Their team understands our brand deeply and creates designs that resonate with our target audience. The fast turnaround times have been crucial for our marketing campaigns, and the original designs always stand out. They're not just a vendor—they're a true partner in our success."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold">
+                            DP
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">David Park</p>
+                            <p class="text-sm text-gray-600">Marketing Director, E-commerce</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-16 md:py-24 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&h=900&fit=crop&q=80" alt="Call to Action Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Ready to Transform Your Brand?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
+                Let's create something extraordinary together. Start your design project today and see the difference professional design can make.
+            </p>
+            <button class="btn-primary bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition duration-300 inline-block">
+                Get Your Free Consultation
+            </button>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Find answers to common questions about our design services
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-blue-300 transition duration-300">
+                    <button class="faq-question w-full px-6 md:px-8 py-5 md:py-6 flex items-center justify-between hover:bg-gray-50 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset" onclick="toggleFAQ(this)">
+                        <h3 class="text-lg font-semibold text-gray-900 text-left">
+                            How long does it take to complete a design project?
+                        </h3>
+                        <i class="fas fa-chevron-down text-gray-600 transition duration-300 transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 md:px-8 pb-6 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Most design projects are completed within 24-48 hours from the time we receive your brief and all necessary information. However, this can vary depending on the complexity and scope of your project. For rush orders or larger projects, we offer expedited services. We'll provide you with a specific timeline during the consultation phase, and we always strive to deliver faster than promised. Our efficient workflow and experienced team ensure quick turnarounds without compromising quality.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-blue-300 transition duration-300">
+                    <button class="faq-question w-full px-6 md:px-8 py-5 md:py-6 flex items-center justify-between hover:bg-gray-50 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset" onclick="toggleFAQ(this)">
+                        <h3 class="text-lg font-semibold text-gray-900 text-left">
+                            Do you really offer unlimited revisions?
+                        </h3>
+                        <i class="fas fa-chevron-down text-gray-600 transition duration-300 transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 md:px-8 pb-6 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Yes, absolutely! We genuinely offer unlimited revisions at no additional cost. We believe that your satisfaction is paramount, and we're willing to work with you for as long as it takes to get the design exactly right. Whether you need minor adjustments or significant changes, we'll implement them without hesitation. This commitment to your satisfaction is one of the core values that sets us apart from other design agencies. We track revision requests and ensure timely delivery of each iteration.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-blue-300 transition duration-300">
+                    <button class="faq-question w-full px-6 md:px-8 py-5 md:py-6 flex items-center justify-between hover:bg-gray-50 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset" onclick="toggleFAQ(this)">
+                        <h3 class="text-lg font-semibold text-gray-900 text-left">
+                            Will I own the rights to the designs?
+                        </h3>
+                        <i class="fas fa-chevron-down text-gray-600 transition duration-300 transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 md:px-8 pb-6 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Yes, you will have complete ownership of all designs created for you. Upon final payment, all intellectual property rights transfer fully to you. This means you can use the designs however you see fit—commercially, personally, or any other purpose. You're free to modify them, reproduce them, or use them across all your marketing channels. We don't retain any rights to your designs, and you're under no obligation to credit us (though we always appreciate it!). This complete ownership transfer is standard across all our packages.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-blue-300 transition duration-300">
+                    <button class="faq-question w-full px-6 md:px-8 py-5 md:py-6 flex items-center justify-between hover:bg-gray-50 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset" onclick="toggleFAQ(this)">
+                        <h3 class="text-lg font-semibold text-gray-900 text-left">
+                            What if I'm not happy with the final design?
+                        </h3>
+                        <i class="fas fa-chevron-down text-gray-600 transition duration-300 transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 md:px-8 pb-6 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            We stand behind our work with a 100% satisfaction guarantee. If you're not happy with the final design, we offer a full refund—no questions asked. However, we're confident that won't be necessary. Our unlimited revisions policy ensures that we work with you until you're completely satisfied. We've built our reputation on delivering exceptional results, and we take your feedback seriously at every stage of the design process. Your happiness is our ultimate goal, and we're committed to making sure you love the final product.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Get In Touch
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Ready to start your design project? Contact us today for a free consultation
+                </p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-8 md:mb-12">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Email</p>
+                                    <a href="mailto:test@test.com" class="text-blue-600 hover:text-blue-700 transition duration-300">test@test.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-phone text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Phone</p>
+                                    <p class="text-gray-700">Available 24/7 for inquiries</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Location</p>
+                                    <p class="text-gray-700">Serving clients worldwide</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Quick Response Time</h3>
+                        <p class="text-gray-700 mb-6">
+                            We typically respond to inquiries within 2 hours during business hours. Our team is dedicated to providing prompt support and getting your project started as quickly as possible.
+                        </p>
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                            <p class="text-sm text-gray-700">
+                                <span class="font-semibold text-blue-900">Pro Tip:</span> Include as much detail as possible about your project in your initial inquiry. This helps us provide a more accurate quote and timeline.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-900 mb-2">Your Name</label>
+                            <input type="text" placeholder="John Doe" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-900 mb-2">Email Address</label>
+                            <input type="email" placeholder="you@example.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-900 mb-2">Project Type</label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                            <option>Select a project type</option>
+                            <option>Logo Design</option>
+                            <option>Brand Identity</option>
+                            <option>Marketing Materials</option>
+                            <option>Social Media Graphics</option>
+                            <option>Web Design</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-900 mb-2">Tell us about your project</label>
+                        <textarea placeholder="Describe your project, goals, and any specific requirements..." rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition duration-300">
+                        Send Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-palette text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">DesignPro</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Professional graphic design services delivering exceptional creative solutions for businesses worldwide.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-blue-400 transition duration-300 text-sm">Home</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-blue-400 transition duration-300 text-sm">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-blue-400 transition duration-300 text-sm">Benefits</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-blue-400 transition duration-300 text-sm">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 text-sm">Design Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 text-sm">Editing & Revision</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 text-sm">Brand Consulting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 text-sm">Custom Solutions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Legal -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact & Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="mailto:test@test.com" class="text-gray-400 hover:text-blue-400 transition duration-300 text-sm">Email Us</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-blue-400 transition duration-300 text-sm">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-blue-400 transition duration-300 text-sm">Terms of Service</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-blue-400 transition duration-300 text-sm">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 mb-8"></div>
+
+            <!-- Bottom Section -->
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <p class="text-gray-400 text-sm mb-6 md:mb-0">
+                    &copy; 2024 DesignPro. All rights reserved.
+                </p>
+                
+                <!-- Social Links -->
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300" aria-label="Facebook">
+                        <i class="fab fa-facebook-f text-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300" aria-label="Twitter">
+                        <i class="fab fa-twitter text-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300" aria-label="Instagram">
+                        <i class="fab fa-instagram text-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.mobile-menu').classList.remove('active');
+            });
+        });
+
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const faqItem = button.closest('.faq-item');
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                const icon = item.querySelector('.faq-question i');
+                if (icon) {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current FAQ item
+            if (!isActive) {
+                faqItem.classList.add('active');
+                const icon = button.querySelector('i');
+                if (icon) {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            }
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .testimonial-card, .faq-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
